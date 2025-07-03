@@ -9,11 +9,13 @@ const load = (d) =>{
         const id = document.createElement('p')
         const email = document.createElement('p')
         const phone = document.createElement('p')
-        name.textContent = d[i]['name']
-        email.textContent = d[i]['email']
-        phone.textContent = d[i]['phone']
-        website.textContent = d[i]['website']
-        data.append(name,email,phone,website)
+        address.textContent = 'address:' +'\n' +'city'+ d[i]['address']['city'] + '\n' + 'street' + d[i]['address']['street']
+        id.textContent = 'id : ' + d[i]['id']
+        name.textContent = `name : ` + d[i]['name']
+        email.textContent = 'email: ' + d[i]['email']
+        phone.textContent = 'phone: '+ d[i]['phone']
+        website.textContent = 'website: ' + d[i]['website']
+        data.append(id,name,email,phone,website,address)
         cont.appendChild(data)
     }
 
