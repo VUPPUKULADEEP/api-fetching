@@ -4,12 +4,12 @@ const load = (d) =>{
         const data = document.createElement('section')
         const name = document.createElement('p')
         const company = document.createElement('section')
-        const address = document.createElement('section')
+        const address = document.createElement('div')
         const website = document.createElement('p')
         const id = document.createElement('p')
         const email = document.createElement('p')
         const phone = document.createElement('p')
-        address.textContent = 'address:' +'\n' +'city'+ d[i]['address']['city'] + '\n' + 'street' + d[i]['address']['street']
+        address.innerHTML = `address: <br> city: ${d[i]['address']['city']}   <br> street: ${d[i]['address']['street']}`
         id.textContent = 'id : ' + d[i]['id']
         name.textContent = `name : ` + d[i]['name']
         email.textContent = 'email: ' + d[i]['email']
