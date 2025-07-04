@@ -24,7 +24,7 @@ const load = (d) =>{
 
 
 
-const get = async() =>{
+window.onload = async() =>{
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     const d =  await response.json()
     console.log(d)
