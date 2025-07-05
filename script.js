@@ -9,12 +9,12 @@ const load = (d) =>{
         const id = document.createElement('p')
         const email = document.createElement('p')
         const phone = document.createElement('p')
-        address.innerHTML = `address: <br> city: ${d[i]['address']['city']}   <br> street: ${d[i]['address']['street']}`
-        id.textContent = 'id : ' + d[i]['id']
-        name.textContent = `name : ` + d[i]['name']
-        email.textContent = 'email: ' + d[i]['email']
-        phone.textContent = 'phone: '+ d[i]['phone']
-        website.textContent = 'website: ' + d[i]['website']
+        address.innerHTML = `<p class='swe'>address: </p><br> <p class='swe'>city:</p> ${d[i]['address']['city']}   <br> <p class='swe'>street: </p>${d[i]['address']['street']}`
+        id.innerHTML = `<p class='s'>id : </p>  ${d[i]['id']}`
+        name.innerHTML = `<p class='s'>name : </p> ${d[i]['name']}`
+        email.innerHTML = `<p class='s'>email:  </p> ${d[i]['email']}`
+        phone.innerHTML = `<p class='s'> phone:</p>  ${d[i]['phone']}`
+        website.innerHTML = `<p class='s'> website: </p> <a href=${d[i]['website']}>${ d[i]['website']}</a>`
         data.append(id,name,email,phone,website,address)
         cont.appendChild(data)
     }
