@@ -1,19 +1,26 @@
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
-  background-color: lightgreen;
+  background-color: black;
   border-radius: 2.5%;
   width: 100%;
   margin-bottom: 2%;
 }
 
 header > h1 {
-  color: black;
+  color: white;
   font-variant: small-caps;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+}
+header > :nth-child(1){
+    flex:1;
+    text-align: center;
+}
+header > :nth-child(2){
+    margin-right: 2%;
 }
 
 .container{
